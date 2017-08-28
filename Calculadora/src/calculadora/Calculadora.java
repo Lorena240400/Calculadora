@@ -18,4 +18,17 @@ public class Calculadora {
         resultado=operando1-operando2;
     }
     
+    void multiplicación (){
+        
+        resultado= operando1*operando2;
+    }
+    
+    void división (){
+        
+        if(operando2 != 0){
+            
+            resultado= operando1/operando2;
+        }
+        
+    }
 }
