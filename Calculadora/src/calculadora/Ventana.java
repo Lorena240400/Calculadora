@@ -7,7 +7,8 @@ public class Ventana extends javax.swing.JFrame {
     
     int opcion;
 Calculadora miCalculadora = new Calculadora();
-    
+ Trigonométrico miTrigonométrico= new Trigonométrico();
+ 
     public Ventana() {
         initComponents();
     }
@@ -158,7 +159,15 @@ Calculadora miCalculadora = new Calculadora();
         opcion=1;
        
     }//GEN-LAST:event_sumarMouseClicked
-
+ 
+    void guardar(){
+        
+        float dato;
+        dato=Float.valueOf(display.getText());
+        miTrigonométrico.operando1=dato;
+        display.setText(" ");
+    }
+    
     
     private void igualMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_igualMouseClicked
        
@@ -179,11 +188,14 @@ Calculadora miCalculadora = new Calculadora();
             case 4:
                 miCalculadora.división(); 
                 break;
+                
+         
         }
         
         
         
         dato = miCalculadora.resultado;        
+        
         
         if(dato==-1 && opcion==4){
              
@@ -221,13 +233,15 @@ Calculadora miCalculadora = new Calculadora();
 
     private void senoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_senoMouseClicked
         
-        
+         guardar();       
+     
         
         
     }//GEN-LAST:event_senoMouseClicked
 
     private void cosenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cosenoMouseClicked
        
+         guardar();       
         
         
         
@@ -236,7 +250,8 @@ Calculadora miCalculadora = new Calculadora();
     private void tangenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tangenteMouseClicked
        
         
-        
+         guardar();       
+    
         
     }//GEN-LAST:event_tangenteMouseClicked
 
