@@ -233,7 +233,11 @@ Calculadora miCalculadora = new Calculadora();
 
     private void senoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_senoMouseClicked
         
-         guardar();       
+               float dato;
+        dato=Float.valueOf(display.getText());
+        miTrigonométrico.operando1=dato;
+        miTrigonométrico.seno();
+        display.setText(" " +miTrigonométrico.resultado);
      
         
         
@@ -241,17 +245,23 @@ Calculadora miCalculadora = new Calculadora();
 
     private void cosenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cosenoMouseClicked
        
-         guardar();       
-        
+             
+             float dato;
+        dato=Float.valueOf(display.getText());
+        miTrigonométrico.operando1=dato;
+        miTrigonométrico.coseno();
+        display.setText(" " +miTrigonométrico.resultado);
         
         
     }//GEN-LAST:event_cosenoMouseClicked
 
     private void tangenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tangenteMouseClicked
-       
-        
-         guardar();       
-    
+          
+         float dato;
+        dato=Float.valueOf(display.getText());
+        miTrigonométrico.operando1=dato;
+        miTrigonométrico.tangente();
+        display.setText(" " +miTrigonométrico.resultado);
         
     }//GEN-LAST:event_tangenteMouseClicked
 
